@@ -1,2 +1,2 @@
-# Streamlit-Page
-Streamlit Page
+# EDA-Page
+Streamlit
