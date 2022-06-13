@@ -2,12 +2,12 @@ from time import time
 import streamlit as st
 import pandas as pd
 import numpy as np
-import webbrowser
+# import webbrowser
 import json
 import folium as f
 from streamlit_folium import st_folium
 from folium.features import CustomIcon
-import platform
+from bokeh.models.widgets import Div
 
 
 # 페이지 타이틀
@@ -47,15 +47,18 @@ def write_br():
 
 
 # Notion 으로 이동
-write_header('🌎 Notion 으로 이동')
+write_header('Notion Page')
 write_br()
-if st.button("Notion 으로 이동하기"):
-    url = "https://www.notion.so/cc567db8514c459b91ccd74253985f09"
-    if platform.system() == 'Windows':
-        webbrowser.open_new_tab(url)
-    else:
-        webbrowser.open_new_tab(url)
-
+# if st.button("Notion 으로 이동하기"):
+#     url = "https://www.notion.so/cc567db8514c459b91ccd74253985f09"
+#     webbrowser.open_new_tab(url)
+if st.button('🌎 Notion 으로 이동'):
+    url = 'https://www.notion.so/cc567db8514c459b91ccd74253985f09'
+    js = f"window.open({url})"
+    js = f"window.location.href = '{url}'"  # Current tab
+    html = '<img src onerror="{}">'.format(js)
+    div = Div(text=html)
+    st.bokeh_chart(div)
 write_br()
 write_br()
 
@@ -63,12 +66,14 @@ write_br()
 # Github 으로 이동
 write_header('Github Page')
 write_br()
+
 if st.button("📌 yeommss's Github로 이동하기"):
-    url = "https://github.com/yeommss/Mini-Project/tree/main/5%EC%A3%BC%EC%B0%A8/2%EC%B0%A8"
-    if platform.system() == 'Windows':
-        webbrowser.open_new_tab(url)
-    else:
-        webbrowser.open_new_tab(url)
+    url = 'https://github.com/yeommss/Mini-Project/tree/main/5%EC%A3%BC%EC%B0%A8/2%EC%B0%A8'
+    js = f"window.open('{url}')"
+    js = f"window.location.href = '{url}'"  # Current tab
+    html = '<img src onerror="{}">'.format(js)
+    div = Div(text=html)
+    st.bokeh_chart(div)
 write_br()
 write_br()
 

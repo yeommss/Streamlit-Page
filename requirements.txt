@@ -7,3 +7,4 @@ seaborn
 matplotlib
 folium
 streamlit-folium
+bokeh==2.4.1
