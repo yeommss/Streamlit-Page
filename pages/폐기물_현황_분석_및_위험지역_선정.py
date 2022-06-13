@@ -7,6 +7,7 @@ import json
 import folium as f
 from streamlit_folium import st_folium
 from folium.features import CustomIcon
+import platform
 
 
 # 페이지 타이틀
@@ -50,7 +51,11 @@ write_header('🌎 Notion 으로 이동')
 write_br()
 if st.button("Notion 으로 이동하기"):
     url = "https://www.notion.so/cc567db8514c459b91ccd74253985f09"
-    webbrowser.open_new_tab(url)
+    if platform.system() == 'Windows':
+        webbrowser.open_new_tab(url)
+    else:
+        webbrowser.open_new_tab(url)
+
 write_br()
 write_br()
 
@@ -60,7 +65,10 @@ write_header('Github Page')
 write_br()
 if st.button("📌 yeommss's Github로 이동하기"):
     url = "https://github.com/yeommss/Mini-Project/tree/main/5%EC%A3%BC%EC%B0%A8/2%EC%B0%A8"
-    webbrowser.open_new_tab(url)
+    if platform.system() == 'Windows':
+        webbrowser.open_new_tab(url)
+    else:
+        webbrowser.open_new_tab(url)
 write_br()
 write_br()
 
