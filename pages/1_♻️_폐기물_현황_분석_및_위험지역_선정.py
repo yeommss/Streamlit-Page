@@ -52,28 +52,30 @@ write_br()
 # if st.button("Notion 으로 이동하기"):
 #     url = "https://www.notion.so/cc567db8514c459b91ccd74253985f09"
 #     webbrowser.open_new_tab(url)
-if st.button('🌎 Notion 으로 이동'):
-    url = 'https://www.notion.so/cc567db8514c459b91ccd74253985f09'
-    js = f"window.open('{url}', '_blank', 'noopener')"
-    js = f"window.location.href = '{url}'"  # Current tab
-    html = '<img src onerror="{}">'.format(js)
-    div = Div(text=html)
-    st.bokeh_chart(div)
+# if st.button('🌎 Notion 으로 이동',):
+#     url = 'https://www.notion.so/cc567db8514c459b91ccd74253985f09'
+#     js = f"window.open({url})"
+#     js = f"window.location.href = '{url}'"  # Current tab
+#     html = '<img src onerror="{}">'.format(js)
+#     div = Div(text=html)
+#     st.bokeh_chart(div)
 write_br()
 write_br()
 
+link = '[GitHub](http://github.com)'
+st.markdown(link, unsafe_allow_html=True)
 
 # Github 으로 이동
 write_header('Github Page')
 write_br()
 
-if st.button("📌 yeommss's Github로 이동하기"):
-    url = 'https://github.com/yeommss/Mini-Project/tree/main/5%EC%A3%BC%EC%B0%A8/2%EC%B0%A8'
-    js = f"window.open('{url}', '_blank', 'noopener')"
-    js = f"window.location.href = '{url}'"  # Current tab
-    html = '<img src onerror="{}">'.format(js)
-    div = Div(text=html)
-    st.bokeh_chart(div)
+# if st.button("📌 yeommss's Github로 이동하기"):
+#     url = 'https://github.com/yeommss/Mini-Project/tree/main/5%EC%A3%BC%EC%B0%A8/2%EC%B0%A8'
+#     js = f"window.open('{url}', '_blank', 'noopener')"
+#     js = f"window.location.href = '{url}'"  # Current tab
+#     html = '<img src onerror="{}">'.format(js)
+#     div = Div(text=html)
+#     st.bokeh_chart(div)
 write_br()
 write_br()
 
